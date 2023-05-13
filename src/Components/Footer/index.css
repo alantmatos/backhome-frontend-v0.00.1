@@ -1,3 +1,5 @@
+/* 
+
 .footer-container {
     background-color: rgb(184, 232, 235);
     display: flex;
@@ -5,4 +7,69 @@
     justify-content: center;
 
     height: 100px;
+} 
+
+*/
+
+
+
+
+.footer {
+    background-color: rgb(184, 232, 235);
+    border: 1px solid #000000;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 15%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.brand {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.social_media{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.social_media button {
+    z-index: 10;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+}
+
+.social_network {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/124/124010.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.social_network2 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.social_network3 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.summary {
+    width: 400px;
+}
+
+.brand {
+    display: flex;
 }

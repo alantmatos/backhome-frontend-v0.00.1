@@ -56,7 +56,7 @@ const Signup = () => {
         <div className='modal-card'>
           <form>
             <div>
-              <label>Please enter the PIN sent on your email:</label>
+              <label>Enter the PIN sent to your Email:</label><br></br>
               <input type='number'></input>
             </div>
 
