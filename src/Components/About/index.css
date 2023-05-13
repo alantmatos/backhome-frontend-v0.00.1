@@ -1,0 +1,24 @@
+
+
+.about-container{
+    width: 100vw;
+    height: 84vh;
+
+    background-color: azure;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about{
+    height: 40%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}

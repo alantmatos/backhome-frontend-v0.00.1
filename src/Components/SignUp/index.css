@@ -1,0 +1,67 @@
+.signup-container {
+    background-color: azure;
+    height: 84vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.left {
+    background-color: white;
+    height: 40%;
+    width: 50%;
+    border-radius: 20px;
+    margin-right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+
+}
+
+
+.right {
+    background-color: white;
+    height: 40%;
+    width: 50%;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form>div {
+    margin-bottom: 9px;
+}
+
+label {
+    width: 80px;
+}
+
+input {
+    width: 400px;
+    border: none;
+    border-bottom: 3px solid black;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.modal-card {
+    background-color: white;
+    height: 40%;
+    width: 50%;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
