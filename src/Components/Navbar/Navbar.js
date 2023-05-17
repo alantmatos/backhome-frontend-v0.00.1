@@ -3,9 +3,9 @@ import './index.css';
 import icon from '../Assets/icon.png';
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ user2 }) => {
 
-  const user = {
+  const user = user2 > 0 ? user2 : {
     'name': "Thales",
     'location': "NY"
   };
@@ -33,17 +33,12 @@ const Navbar = () => {
       <div className='user-container'>
         {user && pet ?
           <div>
-            <p>
-              User: {user.name}
-            </p>
-            <p>
-              Location: {user.location}
-            </p>
+            <p>User: {user.name}</p>
+            <p>Location: {user.location}</p>
           </div>
           :
           null}
       </div>
-
 
     </div>
   )

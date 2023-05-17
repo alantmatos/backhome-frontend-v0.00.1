@@ -4,8 +4,23 @@ import './index.css';
 
 const Signup = () => {
 
-  let [modalDisplay, setModalDisplay] = useState(false);
+  const [modalDisplay, setModalDisplay] = useState(false);
+  const [ name, setName ]= useState();
+  const [ email, setEmail ]= useState();
+  const [ password, setPassword ]= useState();
 
+
+const CreateUser = (e) => {
+  e.preventDefault();
+
+  fetch('/users', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json'},
+  body: JSON.stringify({name, email, password})
+  })
+  .then(res => res.json())
+  .then(data => console.log(data));
+};
 
 
   return (
@@ -30,21 +45,21 @@ const Signup = () => {
           <form>
             <div>
               <label>Name:</label><br></br>
-              <input type='text'></input>
+              <input type='text' onChange={(e)=>{setName(e.target.value)}}></input>
             </div>
 
             <div>
               <label>Email:</label><br></br>
-              <input type='text'></input>
+              <input type='text' onChange={(e)=>{setEmail(e.target.value)}}></input>
             </div>
 
             <div>
               <label>Password:</label><br></br>
-              <input type='text'></input>
+              <input type='password' onChange={(e)=>{setPassword(e.target.value)}}></input>
             </div>
 
             <div className='btn-container'> <br></br>
-              <button className='signup-btn' onClick={() => setModalDisplay(!modalDisplay)}>Sign Up</button>
+              <button className='signup-btn' type='submit' onClick={(e) => CreateUser(e)}>Sign Up</button>
             </div>
           </form>
         </div>
