@@ -22,12 +22,14 @@ const Signup = ({ setUser }) => {
       .then((res) => {
         if (res.ok) {
           res.json().then((user) => setUser(user))
+          .then(
+            navigate('/profile')
+          )
         }
         else {
           res.json().then((err) => setErrors(err.errors));
         }
-      })
-    navigate('/profile')
+      })    
   };
 
 
