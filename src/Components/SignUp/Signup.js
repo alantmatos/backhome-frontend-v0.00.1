@@ -9,7 +9,10 @@ const Signup = ({ setUser }) => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [errors, setErrors] = useState([]);
+  const [image, setImage] = useState();
+  const [phone, setPhone] = useState();
+  const [location, setLocation] = useState();
+  const [errors, setErrors] = useState();
   let navigate = useNavigate();
 
   const CreateUser = (e) => {
@@ -17,7 +20,7 @@ const Signup = ({ setUser }) => {
     fetch('/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, password })
+      body: JSON.stringify({ name, email, password, image, location, phone })
     })
       .then((res) => {
         if (res.ok) {
@@ -27,7 +30,10 @@ const Signup = ({ setUser }) => {
           )
         }
         else {
-          res.json().then((err) => setErrors(err.errors));
+          res.json().then((err) => setErrors(err.errors))
+          .then(
+            console.log(errors)
+          );
         }
       })    
   };
@@ -60,6 +66,18 @@ const Signup = ({ setUser }) => {
             <div>
               <label>Password:</label><br></br>
               <input type='password' onChange={(e) => { setPassword(e.target.value) }}></input>
+            </div>
+            <div>
+              <label>Image:</label><br></br>
+              <input type='text' onChange={(e) => { setImage(e.target.value) }}></input>
+            </div>
+            <div>
+              <label>Phone:</label><br></br>
+              <input type='text' onChange={(e) => { setPhone(e.target.value) }}></input>
+            </div>
+            <div>
+              <label>Location:</label><br></br>
+              <input type='text' onChange={(e) => { setLocation(e.target.value) }}></input>
             </div>
             <div className='btn-container'> <br></br>
               <button className='signup-btn' type='submit' onClick={(e) => CreateUser(e)}>Sign Up</button>

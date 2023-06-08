@@ -6,7 +6,15 @@ const UserPage = ({user}) => {
     <>
     <div>UserPage</div>
 
-    
+    {
+      user ?
+      <div>
+        {user.name}
+
+      </div>
+      :
+      null
+    }
     
     
     
