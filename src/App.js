@@ -42,7 +42,7 @@ function App() {
         <Route exact path='/' element={<Home></Home>}> </Route>
         <Route path='/home' element={<Home></Home>}> </Route>
         <Route path='/about' element={<About></About>}> </Route>
-        <Route path='/login' element={<Login setUser={setUser}></Login>}></Route>
+        <Route path='/login' element={<Login setUser={setUser} ></Login>}></Route>
         <Route path='/signup' element={<Signup setUser={setUser}></Signup>}></Route>
         <Route path='/profile' element={<UserPage user={user} ></UserPage>}></Route>
       </Routes>
